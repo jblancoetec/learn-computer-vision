@@ -4,7 +4,7 @@ import typer
 from loguru import logger
 from tqdm import tqdm
 
-from learn_computer_vision.config import MODELS_DIR, PROCESSED_DATA_DIR
+from learn_convnet.config import MODELS_DIR, PROCESSED_DATA_DIR
 
 app = typer.Typer()
 

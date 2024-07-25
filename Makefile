@@ -2,7 +2,7 @@
 # GLOBALS                                                                       #
 #################################################################################
 
-PROJECT_NAME = learn-computer-vision
+PROJECT_NAME = learn-convnet
 PYTHON_VERSION = 3.11
 PYTHON_INTERPRETER = python
 
