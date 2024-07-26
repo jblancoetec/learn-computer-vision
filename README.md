@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-computer vision course - Kaggle
+convnet course - Kaggle
 
 ## Project Organization
 
@@ -26,7 +26,7 @@ computer vision course - Kaggle
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
-├── pyproject.toml     <- Project configuration file with package metadata for learn_computer_vision
+├── pyproject.toml     <- Project configuration file with package metadata for learn_convnet
 │                         and configuration for tools like black
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
@@ -39,9 +39,9 @@ computer vision course - Kaggle
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
-└── learn_computer_vision                <- Source code for use in this project.
+└── learn_convnet                <- Source code for use in this project.
     │
-    ├── __init__.py    <- Makes learn_computer_vision a Python module
+    ├── __init__.py    <- Makes learn_convnet a Python module
     │
     ├── data           <- Scripts to download or generate data
     │   └── make_dataset.py

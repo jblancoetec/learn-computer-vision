@@ -2,7 +2,7 @@
 
 ## Description
 
-computer vision course - Kaggle
+convnet course - Kaggle
 
 ## Commands
 

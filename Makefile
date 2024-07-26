@@ -28,14 +28,14 @@ clean:
 ## Lint using flake8 and black (use `make format` to do formatting)
 .PHONY: lint
 lint:
-	flake8 learn_computer_vision
-	isort --check --diff --profile black learn_computer_vision
-	black --check --config pyproject.toml learn_computer_vision
+	flake8 learn_convnet
+	isort --check --diff --profile black learn_convnet
+	black --check --config pyproject.toml learn_convnet
 
 ## Format source code with black
 .PHONY: format
 format:
-	black --config pyproject.toml learn_computer_vision
+	black --config pyproject.toml learn_convnet
 
 
 
@@ -57,7 +57,7 @@ create_environment:
 ## Make Dataset
 .PHONY: data
 data: requirements
-	$(PYTHON_INTERPRETER) learn_computer_vision/dataset.py
+	$(PYTHON_INTERPRETER) learn_convnet/dataset.py
 
 
 #################################################################################
