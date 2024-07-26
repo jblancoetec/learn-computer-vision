@@ -1,28 +1,28 @@
-from pathlib import Path
-
-import typer
-from loguru import logger
+import pathlib as pl
+import typer as ty
+from loguru import logger as log
+import kaggle as kg
 from tqdm import tqdm
-
 from learn_convnet.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 
-app = typer.Typer()
+app = ty.Typer()
 
 
 @app.command()
-def main(
-    # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
-    input_path: Path = RAW_DATA_DIR / "dataset.csv",
-    output_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
-    # ----------------------------------------------
-):
-    # ---- REPLACE THIS WITH YOUR OWN CODE ----
-    logger.info("Processing dataset...")
-    for i in tqdm(range(10), total=10):
-        if i == 5:
-            logger.info("Something happened for iteration 5.")
-    logger.success("Processing dataset complete.")
-    # -----------------------------------------
+def main():
+    try:
+        download_dataset_if_does_not_exist(RAW_DATA_DIR)
+    except Exception as e:
+        log.error(f"Error downloading dataset: {e}")
+
+
+def download_dataset_if_does_not_exist(raw_data_dir: pl.Path):
+    log.info("Downloading data...")
+    raw_data_dir.resolve().mkdir(parents=True, exist_ok=True)
+    kg.api.dataset_download_files(
+        dataset="ryanholbrook/car-or-truck", path=raw_data_dir, unzip=True
+    )
+    log.success("Data downloaded.")
 
 
 if __name__ == "__main__":

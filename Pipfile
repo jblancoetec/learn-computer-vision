@@ -9,6 +9,7 @@ python-dotenv = "*"
 tqdm = "*"
 typer = "*"
 "learn_convnet" = {editable = true,  path = "."}
+kaggle = "*"
 
 [requires]
 python_version = "3.11"
