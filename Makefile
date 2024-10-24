@@ -5,6 +5,7 @@
 PROJECT_NAME = learn-convnet
 PYTHON_VERSION = 3.11
 PYTHON_INTERPRETER = python
+PYTHON_VENV = pipenv
 
 #################################################################################
 # COMMANDS                                                                      #
@@ -56,8 +57,8 @@ create_environment:
 
 ## Make Dataset
 .PHONY: data
-data: requirements
-	$(PYTHON_INTERPRETER) learn_convnet/dataset.py
+data:
+	$(PYTHON_VENV) run python learn_convnet/dataset.py
 
 
 #################################################################################

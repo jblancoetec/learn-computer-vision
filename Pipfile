@@ -10,6 +10,12 @@ tqdm = "*"
 typer = "*"
 "learn_convnet" = {editable = true,  path = "."}
 kaggle = "*"
+tensorflow = "*"
+pandas = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.11"
+
+[dev-packages]
+ipykernel = "*"
